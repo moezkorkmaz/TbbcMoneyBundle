@@ -1,7 +1,7 @@
 <?php
 namespace Tbbc\MoneyBundle\Command;
 
-use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Tbbc\MoneyBundle\Pair\PairManagerInterface;
@@ -10,7 +10,7 @@ use Tbbc\MoneyBundle\Pair\PairManagerInterface;
  * Class RatioListCommand
  * @package Tbbc\MoneyBundle\Command
  */
-class RatioListCommand extends ContainerAwareCommand
+class RatioListCommand extends Command
 {
     protected static $defaultName = 'tbbc:money:ratio-list';
     
