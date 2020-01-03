@@ -1,7 +1,7 @@
 <?php
 namespace Tbbc\MoneyBundle\Command;
 
-use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Tbbc\MoneyBundle\MoneyException;
@@ -11,7 +11,7 @@ use Tbbc\MoneyBundle\Pair\PairManagerInterface;
  * Class RatioFetchCommand
  * @package Tbbc\MoneyBundle\Command
  */
-class RatioFetchCommand extends ContainerAwareCommand
+class RatioFetchCommand extends Command
 {
     protected static $defaultName = 'tbbc:money:ratio-fetch';
     
