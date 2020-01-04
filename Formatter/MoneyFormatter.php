@@ -4,6 +4,7 @@ namespace Tbbc\MoneyBundle\Formatter;
 
 use Money\Currency;
 use Money\Money;
+use Symfony\Component\Intl\Currencies;
 use Symfony\Component\Intl\Intl;
 
 /**
@@ -122,7 +123,7 @@ class MoneyFormatter
      */
     public function formatCurrencyAsSymbol(Currency $currency)
     {
-        return Intl::getCurrencyBundle()->getCurrencySymbol($currency->getCode());
+        return Currencies::getSymbol($currency->getCode());
     }
 
     /**
